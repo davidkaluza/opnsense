@@ -1,9 +1,5 @@
 # opnsense
 
-pkg install vim git
-
-<clipboard-copy>
-  Copy path
-</clipboard-copy>
+    pkg install vim git
 
 ln -s /usr/libexec/locate.updatedb /bin/updatedb

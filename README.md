@@ -2,7 +2,7 @@
 
 install tools
 
-    pkg install vim git
+    pkg install vim git sysutils/lsof
 
 link updatedb
 

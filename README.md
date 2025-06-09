@@ -2,4 +2,4 @@
 
     pkg install vim git
 
-ln -s /usr/libexec/locate.updatedb /bin/updatedb
+    ln -s /usr/libexec/locate.updatedb /bin/updatedb

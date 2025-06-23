@@ -4,6 +4,10 @@ install tools
 
     pkg install vim git sysutils/lsof
 
+set timeserver
+
+    times.tu-berlin.de
+
 link updatedb
 
     ln -s /usr/libexec/locate.updatedb /bin/updatedb

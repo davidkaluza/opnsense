@@ -12,6 +12,10 @@ link updatedb
 
     ln -s /usr/libexec/locate.updatedb /bin/updatedb
 
+install htop
+
+    pkg add https://pkg.freebsd.org/FreeBSD:14:amd64/quarterly/All/htop-3.4.0.pkg
+
 check for permission
 
     sudo -u telegraf more /var/log/suricata/eve.json

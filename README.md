@@ -3,6 +3,7 @@
 install tools
 
     pkg install vim git sysutils/lsof
+    pkg install sysutils/hwstat
 
 set timeserver
 

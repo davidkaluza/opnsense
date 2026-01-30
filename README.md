@@ -5,6 +5,11 @@ install tools
     pkg install vim git sysutils/lsof
     pkg install sysutils/hwstat
 
+    check this ???
+    git clone https://git.FreeBSD.org/ports.git /usr/ports
+    pkg install benchmarks/sysbench
+    
+    
 set timeserver
 
     times.tu-berlin.de

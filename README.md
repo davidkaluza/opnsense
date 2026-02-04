@@ -9,7 +9,11 @@ install tools
     git clone https://git.FreeBSD.org/ports.git /usr/ports
     pkg install benchmarks/sysbench
     
-    
+set .cshrc
+     
+    set prompt="%{\e[31m%}root%{\e[37m%}@%{\e[33m%}%m%{\e[37m%}:%{\e[36m%}%/%{\e[37m%}#%{\e[0m%} "
+    set promptchars = "%#"
+
 set timeserver
 
     times.tu-berlin.de

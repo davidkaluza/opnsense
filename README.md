@@ -32,5 +32,5 @@ check for permission
 
 change permission to read eve.json
 
-    pw group mod wheel -m telegraf
+    pw groupmod wheel -m telegraf
     pw groupshow wheel

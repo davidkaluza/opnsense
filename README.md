@@ -5,9 +5,11 @@ install tools
     pkg install vim git sysutils/lsof
     pkg install sysutils/hwstat
 
-    check this ???
-    git clone https://git.FreeBSD.org/ports.git /usr/ports
-    pkg install benchmarks/sysbench
+install htop
+
+    enable FreeBSD
+    
+    /usr/local/etc/pkg/repos/FreeBSD.conf
     
 set .cshrc
      

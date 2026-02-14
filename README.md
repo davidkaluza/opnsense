@@ -36,3 +36,42 @@ change permission to read eve.json
 
     pw groupmod wheel -m telegraf
     pw groupshow wheel
+
+arp (mac to IP) Telegraf output
+
+    ee /usr/local/bin/arp_telegraf.sh
+
+/usr/local/bin/arp_telegraf.sh
+
+    #!/bin/sh
+    # Output: Influx Line Protocol
+    # Tags: ip, mac (mac ohne ":"), iface wenn verfügbar
+    # Field: present=1i
+
+    arp -an | awk '
+    /\(/ {
+      gsub("[()]", "", $2);
+      ip=$2;
+      mac=$4;
+
+      # skip incomplete
+      if (mac == "(incomplete)" || mac == "" || ip == "") next;
+
+      # make MAC tag safe
+      gsub(":", "-", mac);
+
+      printf "arp_table,source=opnsense,ip=%s,mac=%s present=1i\n", ip, mac;
+    }'
+
+/usr/local/bin/arp_telegraf.sh
+    
+    chmod +x /usr/local/bin/arp_telegraf.sh
+    /usr/local/bin/arp_telegraf.sh
+
+/usr /local/telegraf.conf
+
+    [[inputs.exec]]
+      commands = ["/usr/local/bin/arp_telegraf.sh"]
+      timeout = "5s"
+      data_format = "influx"
+      interval = "60s"
